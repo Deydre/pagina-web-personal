@@ -120,7 +120,6 @@ header nav input:checked ~ ul{
     opacity: 100;
 }
 
-/* PRESENTACIÓN - Ocultar icono con una clase*/
 .hidden {
     display: none;
 }
@@ -430,6 +429,21 @@ footer img {
     width: 30px;
 }
 
+.notHidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.notHidden h3 {
+    margin-bottom: 8px;
+}
+
+.notHidden div {
+    margin-bottom: 20px;
+}
+
 /* Media Queries */
 
 @media (min-width: 922px) {
@@ -535,7 +549,7 @@ footer img {
     }
 
     #message {
-        height: 90%;
+        height: 100%;
     }
 
 }
