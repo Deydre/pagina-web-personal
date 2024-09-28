@@ -52,20 +52,20 @@ h4 {
     font-size: 15px;
 }
 
-.flex-item > h1{
+#flex-item > h1{
     line-height: 1em;
     padding: 40px 0px 14px 0px;
     text-align: center;
 }
 
-.flex-item h3{
+#flex-item h3{
     text-align: center;
 }
 
 .icon-title{
     display: flex;
     flex-flow: row wrap;
-    margin-bottom: 10px;
+    margin: 20px 0px 10px 0px;
 }
 
 .icon-title svg{
@@ -86,9 +86,10 @@ a{
     color: white;
     text-decoration: none;
 }
+
 /* Menú hamburguesa */
 
-#menu{
+.menu{
     margin-left: 20px;
     padding: 18PX 20px;
     position: fixed;
@@ -119,6 +120,7 @@ header nav input:checked ~ ul{
     opacity: 100;
 }
 
+/* PRESENTACIÓN - Ocultar icono con una clase*/
 .hidden {
     display: none;
 }
@@ -154,13 +156,18 @@ header nav input:checked ~ ul{
     padding: 0px 20px;
 }
 
-#flex-section-row{
+.flex-section-row, .flex-section-row-dif{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 0px 20px 80px 20px;
     gap: 20px;
 }
+
+.flex-section-row{
+    padding: 0px 20px 120px 20px;
+}
+
+
 
 /* Biography */
 
@@ -170,14 +177,14 @@ header nav input:checked ~ ul{
     border: 8px solid rgba(255, 255, 255, 0.378);
 }
 
-#list > li{
+.list > li{
     font-family: Montserrat, sans-serif, Helvetica;
     padding-bottom: 8px;
     font-size: 14px;
 }
 
 /*In Progress*/
-#inProgress{
+.list > li > div{
     background-color: rgba(255, 255, 255, 0.241);
     border-radius: 4px;
     padding: 2px 12px;
@@ -189,12 +196,14 @@ header nav input:checked ~ ul{
     font-size: 14px;
 }
 
-#inProgress p{
+.list > li > div > p{
     font-size: 12px;
     font-weight: 560;
 }
 
-#circle{
+/* Círculo rojo */
+
+.list div > div{
     width: 12px;
     height: 12px;
     border-radius: 100%;
@@ -205,22 +214,22 @@ header nav input:checked ~ ul{
 
 /*Porfolio*/
 
-#flex-section-row{
-    padding-bottom: 140px;
-}
-.porfolioContainer{
+/* Porfolio / Cajas */
+.flex-section-row  article{
     max-width: 400px;
+    border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.36);
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.105);
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    border-radius: 20px;
     gap: 18px;
 }
 
-.porfolioImg{
+/* Porfolio / Imgs */
+
+.flex-section-row > article > img {
     width: 500px;
     height: 220px;
     border-radius: 10px;
@@ -229,20 +238,26 @@ header nav input:checked ~ ul{
     max-height: 100%;
 }
 
-.porfolioText{
+/* Porfolio / Cajas de texto */
+
+.flex-section-row div {
     max-width: 100%;
     padding: 0px 10px;
 }
 
-.porfolioText h4{
+/* Porfolio / Textos */
+
+.flex-section-row > article h4{
     margin-bottom: 8px;
 }
 
-.porfolioText p{
+.flex-section-row > article p{
     color:rgba(255, 255, 255, 0.862);
 }
 
-.porfolioText > a{
+/* Porfolio / Enlaces */
+
+.flex-section-row a{
     display: flex;
     justify-content: center;
     border-radius: 60px;
@@ -253,13 +268,13 @@ header nav input:checked ~ ul{
     max-width: 200px;
 }
 
-.porfolioText > a:hover {
+.flex-section-row a:hover {
     background-color: rgb(134, 67, 205);
     transition: background-color 0.2s ease-in-out;
 }
 
 
-.porfolioText > a > img{
+.flex-section-row a > img{
     width: 18px;
 }
 
@@ -270,40 +285,103 @@ header nav input:checked ~ ul{
     width: 100%
 }
 
-#contact-section article{
+form{
     max-width: 400px; /* Ancho del elemento */
     margin: 0 auto;
+    padding-bottom: 120px;
 }
 
-.form-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 500px;
+input, textarea {
+    background-color: rgba(255, 255, 255, 0.579);
+
 }
-.form-container h2 {
-    margin-top: 0;
+
+
+input:focus {
+    background-color: white;
 }
-.form-group {
-    margin-bottom: 15px;
+
+fieldset {
+    padding: 20px 20px 26px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.36);
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.105);
 }
-.form-group label {
+
+legend {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.748);
+}
+
+form label {
     display: block;
     margin-bottom: 5px;
+    font-size: 14px;
 }
-.form-group input, .form-group textarea {
+
+form input, form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
-.form-group textarea {
-    resize: vertical;
+
+form textarea {
     min-height: 100px;
 }
-.form-group button {
+
+/* Radio */
+
+input[type="radio"] {
+    width: auto;
+}
+
+form ul label {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+form ul, form li {
+    display: flex;
+    gap: 10px;
+}
+
+form ul {
+    flex-direction: column;
+    margin-left: 12px;
+}
+
+form li {
+    flex-direction: wrap;
+}
+
+/* Checkbox */
+#checkboxContainer {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#checkboxContainer input {
+    width: auto;
+}
+
+#checkboxContainer label {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+
+/* Button */
+
+form button {
     background-color: rgb(40, 40, 40);
     color: #fff;
     border: none;
@@ -313,11 +391,12 @@ header nav input:checked ~ ul{
     font-size: 16px;
     font-family: lexend, sans-serif, Helvetica;
 }
-.form-group button:hover {
+
+form button:hover {
     background-color: rgb(134, 67, 205);
 }
 
-/* FOOTER */
+/* PRESENTACIÓN - Footer */
 footer li {
     list-style: none;
 }
@@ -356,13 +435,14 @@ footer img {
 @media (min-width: 922px) {
     .icon-title{
         justify-content: center;
+        margin: 0px 0px 10px 0px;
     }
 
-    #menu{
+    .menu{
         padding: 20px 60px;
     }
 
-    .bio, #flex-section-column, #pofolioContainer{
+    .flex-section-column, .flex-section-row-dif, .titleContainer{
         margin-top: 60px;
     }
 
@@ -371,7 +451,7 @@ footer img {
         margin-right: 40px;
     }
 
-    /* MENÚ SIN HAMBURGUESA*/
+    /* PRESENTACIÓN - Menú deshamburguesa */
 
     header nav label{
         display: none;
@@ -382,7 +462,7 @@ footer img {
         opacity: 100%;
     }
 
-    #menu{
+    .menu{
         display: flex;
         flex-flow: row wrap;
         align-items: center;
@@ -390,11 +470,11 @@ footer img {
         gap: 20px;
     }
 
-    #menu > li{
+    .menu > li{
         list-style: none;
     }
 
-    #list{
+    .list{
         padding-left: 20px;
     }
 
@@ -402,13 +482,13 @@ footer img {
         padding-top: 4px;
     }
 
-    #menu > li > a {
+    .menu > li > a {
         color:rgba(255, 255, 255, 0.637);
         display: inline-block;
         transition: transform 0.2s ease-in-out;
     }
 
-    #menu > li > a:hover {
+    .menu > li > a:hover {
         color:white;
         transform: scale(1.1);
     }
@@ -416,4 +496,46 @@ footer img {
     header nav ul {
         background-color: transparent;
     }
+
+    /* Formulario */
+    
+    #contact-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        max-width: 100%; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    form article {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    form article > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    fieldset {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 380px;
+    }
+
+    form article > div:last-child div:last-child{
+        height: 100%;
+    }
+
+    #message {
+        height: 90%;
+    }
+
 }
