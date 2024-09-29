@@ -7,11 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
     let openMenu = document.querySelector("#openMenu");
     let closeMenu = document.querySelector("#closeMenu");
 
-    // Cambiar img HOME por "Home"
-    // Almacenamos la imagen de HOME para volver a ella más tarde
-    let homeImg = document.querySelector("a[href='index.html']").innerHTML;
-    // Almacenamos el contenedor para cambiar más tarde lo de dentro 
-    let homeContainer = document.querySelector("a[href='index.html']");
+    // Comprobar en qué página estamos
+    let homeImg, homeContainer;
+    if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
+        homeContainer = document.querySelector("a[href='index.html']");
+    } else {
+        homeContainer = document.querySelector("a[href='../index.html']");
+    }
+    homeImg = homeContainer.innerHTML;
 
     openMenu.addEventListener('click', function () {
         // Cambiar la clase para ocultarlo y sacar la otra
