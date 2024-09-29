@@ -66,6 +66,6 @@ You can view the live website here: [Deydre's Personal Web Page](https://deydre.
 
   <img src="/media/hiria_dev.jpg" alt="A cat with sunglasses programming" height="280">
   
-  <a href="https://github.com/Deydre"> ~✨ My GitHub ✨~</a>
+  <a href="https://github.com/Deydre"> ⚡✨ My GitHub ✨⚡</a>
   
 </div>
