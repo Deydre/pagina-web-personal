@@ -1,3 +1,4 @@
+/* Selectores globales */
 *{
     margin: 0;
     padding: 0;
@@ -6,10 +7,9 @@
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -18,14 +18,13 @@ body {
     background-size: cover;
     color: white;
     font-family: lexend, sans-serif, Helvetica;
-    overflow-x: hidden;
 }
 
 main {
     padding: 0px 20px;
 }
 
-/* Estilos de textos*/
+/* Estilos de textos y enlaces */
 p{
     font-family: Montserrat, sans-serif, Helvetica;
     line-height: 24px;
@@ -52,9 +51,16 @@ h4 {
     font-size: 15px;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
 a, a img, a path {
     cursor: pointer;
 }
+
+/* */
 
 #flex-item > h1{
     line-height: 1em;
@@ -86,10 +92,7 @@ a, a img, a path {
     padding-right: 10px;
 }
 
-a{
-    color: white;
-    text-decoration: none;
-}
+
 
 /* Menú hamburguesa */
 
@@ -171,7 +174,6 @@ header nav input:checked ~ ul{
 }
 
 
-
 /* Biography */
 
 #profileImgMini{
@@ -231,7 +233,6 @@ header nav input:checked ~ ul{
 }
 
 /* Porfolio / Imgs */
-
 .flex-section-row > article > img {
     width: 500px;
     height: 220px;
@@ -242,14 +243,12 @@ header nav input:checked ~ ul{
 }
 
 /* Porfolio / Cajas de texto */
-
 .flex-section-row div {
     max-width: 100%;
     padding: 0px 10px;
 }
 
 /* Porfolio / Textos */
-
 .flex-section-row > article h4{
     margin-bottom: 8px;
 }
@@ -259,7 +258,6 @@ header nav input:checked ~ ul{
 }
 
 /* Porfolio / Enlaces */
-
 .flex-section-row a{
     display: flex;
     justify-content: center;
@@ -282,7 +280,6 @@ header nav input:checked ~ ul{
 }
 
 /* Formulario*/
-
 #contact-section{
     /* padding: 0 10%; */
     width: 100%
@@ -298,7 +295,6 @@ input, textarea {
     background-color: rgba(255, 255, 255, 0.579);
 
 }
-
 
 input:focus {
     background-color: white;
@@ -399,7 +395,7 @@ form button:hover {
     background-color: rgb(134, 67, 205);
 }
 
-/* PRESENTACIÓN - Footer */
+/* Footer */
 footer li {
     list-style: none;
 }
@@ -431,6 +427,12 @@ footer ul {
 
 footer img {
     width: 30px;
+    opacity: 60%;
+}
+
+footer img:hover {
+    width: 30px;
+    opacity: 100%;
 }
 
 .notHidden {
