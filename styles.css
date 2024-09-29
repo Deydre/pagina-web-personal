@@ -558,4 +558,14 @@ footer img:hover {
         height: 100%;
     }
 
+    #successMessage div img {
+        width: 270px;
+    }
+
+
+    #successMessage div{
+        height: 291px;
+    }
+
+    
 }
