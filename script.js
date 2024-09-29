@@ -7,13 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
     let openMenu = document.querySelector("#openMenu");
     let closeMenu = document.querySelector("#closeMenu");
 
+    
+    let homeImg; 
+    let homeContainer;
     // Comprobar en qué página estamos
-    let homeImg, homeContainer;
     if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
         homeContainer = document.querySelector("a[href='index.html']");
     } else {
         homeContainer = document.querySelector("a[href='../index.html']");
     }
+    
     homeImg = homeContainer.innerHTML;
 
     openMenu.addEventListener('click', function () {
