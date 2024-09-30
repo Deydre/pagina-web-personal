@@ -57,6 +57,7 @@ You can view the live website here: [Deydre's Personal Web Page](https://deydre.
 
 - UX / Make the menu and footer less intrusive when scrolling.
 - UX / Night Mode toggle for the entire website.
+- Icons / Take them from Font Awesome (not imgs)
 - Portfolio / Project filtering by tag.
 
 
